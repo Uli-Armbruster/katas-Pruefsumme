@@ -8,6 +8,11 @@ Hauptaugenmerk liegt dabei auf die Trennung von Domänenlogik und infrastrukture
 - Infrastruktur muss wiederverwendbar sein
 
 
+## Branch: conference-talks
+Dieser Branch orientiert sich am Master-Branch, der Umfang wurde jedoch dahingehend reduziert, dass ein 45-minütiger Vortrag dazu möglich ist.
+Die zugehörige Präsentation befindet sich [hier](https://speakerdeck.com/uli_armbruster/separation-of-concerns).
+
+
 ## Interessenten
 Ihr wollt Teile davon in euren Vorträgen verwenden, ihr wollt ein Training zu dem Thema oder ich soll dazu in euerer Community einen Vortrag halten, dann kontaktiert mich über die unten genannten Kanäle.
 Weitere Infos folgen...
