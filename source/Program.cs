@@ -1,18 +1,32 @@
 ﻿using System;
+using Pruefsumme.I99_Loesung;
 
 namespace Pruefsumme
 {
   internal static class Program
   {
-    private static void Main()
+    private static void Main(string[] args)
     {
-      Func<string, int> prüfzifferBerechnung = I00_Problemstellung.Pruefsumme.Erzeuge;
+      //Einfachere Verwendung
+      //Bessere Verständlichkeit
+      var localhost = IPv4Address.Localhost();
+      localhost = new Localhost(); //alternativ
 
-      var ip = "192.168.115.1";
-      Console.WriteLine($"Prüfziffer zur IP {ip} lautet: {prüfzifferBerechnung(ip)}");
+      Console.WriteLine("Prüfziffer zu Localhost lautet: " +
+                        PruefsummeAlgorithmen
+                          .FürNetzwerkAdressen()
+                          .ErzeugeFürGanzzahl(localhost)
+      );
 
-      ip = "10.10.148.1";
-      Console.WriteLine($"Prüfziffer zur IP {ip} lautet: {prüfzifferBerechnung(ip)}");
+
+      //Erweiterbarkeit
+      //Wiederverwendbarkeit
+      var rechnungsnr = 20180619001;
+      Console.WriteLine("Prüfziffer zu Rechnungsnr lautet: " +
+                        PruefsummeAlgorithmen
+                          .FürRechnungsnummern()
+                          .ErzeugeFürGanzzahl(rechnungsnr)
+      );
 
       Console.ReadKey();
     }
